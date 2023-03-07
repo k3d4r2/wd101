@@ -12,7 +12,7 @@ function writeTable(){
         user_entries = [];
     }
     return user_entries;
-}
+}1
 user_entries = writeTable();
 
 let username = element("name"),
@@ -50,8 +50,16 @@ let email_err_message = "Not a valid E-mail";
 let tc_err_message = "You must agree to the terms and conditions";
 let dob_err_message = "Your age must be between 18 and 55 to continue";
 
+const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
+
 email.addEventListener("input", (e) => {
-    let cond_email = !(email.value.includes("@") && email.value.includes("."));
+    let cond_email = !(validateEmail(email));
     e.preventDefault();
     verify(email,email_err_message,cond_email);
 });
