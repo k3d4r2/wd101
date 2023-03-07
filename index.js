@@ -51,7 +51,7 @@ let tc_err_message = "You must agree to the terms and conditions";
 let dob_err_message = "Your age must be between 18 and 55 to continue";
 
 email.addEventListener("input", (e) => {
-    let cond_email = !(email.value.includes("@") && email.value.includes("."));
+    let cond_email = !(email.value.includes("@"));
     e.preventDefault();
     verify(email,email_err_message,cond_email);
 });
