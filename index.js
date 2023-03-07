@@ -59,7 +59,7 @@ const validateEmail = (email) => {
   };
 
 email.addEventListener("input", (e) => {
-    let cond_email = !(validateEmail(email));
+    let cond_email = (validateEmail(email));
     e.preventDefault();
     verify(email,email_err_message,cond_email);
 });
