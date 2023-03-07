@@ -1,0 +1,55 @@
+<html>
+
+<head>
+  <title>WD101 Form Assignment</title>
+</head>
+
+<body>
+  <div id="main">
+    <div id="form-box">
+      <h1><u>Registration Form</u></h1>
+      <form id="form">
+        <div id="username" class="inputs">
+          <label for="name">Name</label>
+          <input type="text" required id="name" name="name"  required/>
+        </div>
+        <div id="emailid" class="inputs">
+          <label for="email">Valid Email</label>
+          <input type="email"required id="email" name="email"  required />
+        </div>
+        <div id="passwd" class="inputs">
+          <label for="password">New Password</label>
+          <input type="password" required id="password" name="password" required/>
+        </div>
+        <div id="dob_id" class="inputs">
+          <label for="dob">Date of Birth</label>
+          <input id="dob" name="dob" type="date" required/>
+        </div>
+        <div id="agree">
+          <input id="tc" type="checkbox">I agree to terms and conditions</input>
+        </div>
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </div>
+    
+  </div>
+  
+    <footer>
+        <h1><u>Entries</u></h1>
+    <table id="user-table">
+      <tr>
+        <th>Name</th>
+        <th>Email Id</th>
+        <th>Password</th>
+        <th>Date of Birth</th>
+        <th>Accepted Terms and Conditions?</th>
+      </tr>
+    </table>
+    </footer>
+
+
+
+<script src="index.js"></script>
+</body>
+
+</html>
